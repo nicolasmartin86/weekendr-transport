@@ -1,7 +1,8 @@
 .navbar-weekendr {
   display: flex;
-  height: 20vh;
+  height: 30vh;
   align-items: center;
+  color: $light-gray;
   background: $blue;
   .navbar-brand img {
     width: 10vw;
@@ -9,8 +10,14 @@
   }
   .navbar-title {
     text-align: center;
-    width: 30vw;
-    margin: 0 35vw 0 25vw;
+    width: 40vw;
+    margin: 0 30vw 0 20vw;
+    display: flex;
+    justify-content: center;
     font-size: 32px;
+    .yellow-text {
+      color: $yellow;
+      padding-left: 8px;
+    }
   }
 }

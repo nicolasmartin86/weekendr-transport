@@ -3,12 +3,22 @@
     <%= image_tag 'logo-white-weekendr' %>
   </div>
   <div class="navbar-title">
-    Prix des transports par ville
+    <div><%= "Prix des transports".upcase %></div>
+    <div class="yellow-text"><%= "par ville".upcase %></div>
   </div>
 </div>
 
 <% @destinations.each do |destination| %>
-  <%= image_tag destination.photo_link %>
-  <%= destination.destination_name %>
-  <%= destination.transport_price %>
+  <div class="card-transport-weekendr">
+    <%= image_tag destination.photo_link %>
+    <div class="card-transport-weekendr-infos">
+      <div>
+        <h2><%= destination.destination_name %></h2>
+      </div>
+      <div class="card-transport-weekendr-pricing">
+        <%= image_tag 'ticket-logo' %>
+        <h2><%= "#{destination.transport_price} €" %></h2>
+      </div>
+    </div>
+  </div>
 <% end %>
