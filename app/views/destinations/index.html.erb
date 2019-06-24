@@ -8,17 +8,19 @@
   </div>
 </div>
 
-<% @destinations.each do |destination| %>
-  <div class="card-transport-weekendr">
-    <%= image_tag destination.photo_link %>
-    <div class="card-transport-weekendr-infos">
-      <div>
-        <h2><%= destination.destination_name %></h2>
-      </div>
-      <div class="card-transport-weekendr-pricing">
-        <%= image_tag 'ticket-logo' %>
-        <h2><%= "#{destination.transport_price} €" %></h2>
+<div class="main-container-transport">
+  <% @destinations.each do |destination| %>
+    <div class="card-transport-weekendr">
+      <%= image_tag destination.photo_link %>
+      <div class="card-transport-weekendr-infos">
+        <div class="card-transport-weekendr-title">
+          <h2><%= destination.destination_name %></h2>
+        </div>
+        <div class="card-transport-weekendr-pricing">
+          <i class="fas fa-ticket-alt"></i>
+          <h2><%= "#{destination.transport_price} €" %></h2>
+        </div>
       </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>

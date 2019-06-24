@@ -4,30 +4,38 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+
 .card-transport-weekendr > img {
   height: 200px;
   width: 100%;
   object-fit: cover;
 }
 
-.card-transport-weekendr h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
 .card-transport-weekendr .card-transport-weekendr-infos {
   padding: 16px;
+  height: 25%;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   position: relative;
-}
-
-.card-transport-weekendr-pricing {
-  > img {
-    height: 32px;
-    width: 100%;
+  .card-transport-weekendr-title {
+    max-width: 75%;
+    h2 {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+  .card-transport-weekendr-pricing {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: rgb(200, 200, 200);
+    h2 {
+      margin: 0px 0px 0px 4px;
+      font-size: 12px;
+    }
   }
 }
+
 
