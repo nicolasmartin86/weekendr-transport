@@ -20,12 +20,31 @@
       padding-left: 8px;
     }
   }
+  .select {
+    text-align: center;
+  }
 }
 
 @media(max-width: 1080px) {
   .navbar-weekendr {
     .navbar-title {
       flex-direction: column;
+    }
+  }
+}
+
+@media(max-width: 500px) {
+  .navbar-weekendr {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    .navbar-brand img {
+      width: 100%;
+      height: 100%;
+    }
+    .navbar-title {
+      font-size: 24px;
+      margin: 0 auto;
     }
   }
 }

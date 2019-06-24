@@ -72,11 +72,15 @@ cities_clean.each do |city|
   url_photo = "https://images.kiwi.com/photos/600x600/#{city_name_photo}_#{city[:code_country].downcase}.jpg"
   uri_photo = URI(url_photo)
 
-  if Net::HTTP.get_response(uri_photo).code == "200"
+  flag_url = "http://flags.fmcdn.net/data/flags/w1160/#{city[:code_country].downcase}.png"
+  uri_flag = URI(flag_url)
+
+  if Net::HTTP.get_response(uri_photo).code == "200" && Net::HTTP.get_response(uri_flag).code == "200"
     Destination.create!( {
         destination_name: city[:city_full_name],
         transport_price: city[:transport_price],
-        photo_link: url_photo
+        photo_link: url_photo,
+        flag_url: flag_url
     })
     puts "#{city[:city_full_name]} created!"
   else

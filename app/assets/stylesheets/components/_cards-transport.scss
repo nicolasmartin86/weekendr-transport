@@ -33,3 +33,10 @@
   }
 }
 
+@media(max-width: 500px) {
+  .main-container-transport {
+    width: 300px;
+    grid-template-columns: 1fr;
+  }
+}
+
