@@ -1,4 +1,11 @@
-<h1>Prix des transports par ville</h1>
+<div class="navbar-weekendr">
+  <div class="navbar-brand">
+    <%= image_tag 'logo-white-weekendr' %>
+  </div>
+  <div class="navbar-title">
+    Prix des transports par ville
+  </div>
+</div>
 
 <% @destinations.each do |destination| %>
   <%= image_tag destination.photo_link %>
