@@ -6,11 +6,30 @@
     <div><%= "Prix des transports".upcase %></div>
     <div class="yellow-text"><%= "par ville".upcase %></div>
   </div>
+  <div class="navbar-select">
+    <select class="select" name="exercise">
+      <option value="exo">Exercise</option>
+      <option value="bonus">Bonus - All</option>
+    </select>
+  </div>
 </div>
-
 <div class="main-container-transport">
-  <% @destinations.each do |destination| %>
+    <% @destinations_asked.each do |destination| %>
     <div class="card-transport-weekendr">
+      <%= image_tag destination.photo_link %>
+      <div class="card-transport-weekendr-infos">
+        <div class="card-transport-weekendr-title">
+          <h2><%= destination.destination_name %></h2>
+        </div>
+        <div class="card-transport-weekendr-pricing">
+          <i class="fas fa-ticket-alt"></i>
+          <h2><%= "#{destination.transport_price} €" %></h2>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <% @destinations.each do |destination| %>
+    <div class="card-transport-weekendr other-destinations hidden">
       <%= image_tag destination.photo_link %>
       <div class="card-transport-weekendr-infos">
         <div class="card-transport-weekendr-title">

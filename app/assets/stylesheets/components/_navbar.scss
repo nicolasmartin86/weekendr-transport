@@ -4,6 +4,7 @@
   align-items: center;
   color: $light-gray;
   background: $blue;
+  padding-right: 16px;
   .navbar-brand img {
     padding: 16px;
   }
@@ -21,7 +22,7 @@
   }
 }
 
-@media(max-width: 992px) {
+@media(max-width: 1080px) {
   .navbar-weekendr {
     .navbar-title {
       flex-direction: column;
