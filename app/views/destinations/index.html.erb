@@ -1,0 +1,7 @@
+<h1>Prix des transports par ville</h1>
+
+<% @destinations.each do |destination| %>
+  <%= image_tag destination.photo_link %>
+  <%= destination.destination_name %>
+  <%= destination.transport_price %>
+<% end %>
