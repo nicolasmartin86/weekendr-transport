@@ -6,6 +6,8 @@ require 'json'
 require 'nokogiri'
 
 
+# "http://flags.fmcdn.net/data/flags/w1160/af.png"
+
 puts "Fetching all transport One-way ticket prices from Numbeo..."
 puts "---------------------------------"
 puts "---------------------------------"
